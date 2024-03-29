@@ -1,6 +1,6 @@
 # How to contribute
 
-If you are interested in contributing, feel free to fork and make pull reguests based on the currently open issues.
+If you are interested in contributing, feel free to fork and make pull requests based on the currently open issues.
 If you found a bug, please report an issue on that. Likewise, if you are missing a feature, please report an issue describing the feature you want.
 Lastly, if you have found a security-related issue, please see the [security policy](/SECURITY.md) on how to proceed
 If you're unsure where to start, catch us on [Discord](https://discord.gg/X8rw4vv) in the channel "#volunteers-reporting-for-duty"
