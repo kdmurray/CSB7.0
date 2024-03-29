@@ -14,7 +14,7 @@ COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 RUN mkdir /app
 
-# Install pre-requisits
+# Install prerequisites
 RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
