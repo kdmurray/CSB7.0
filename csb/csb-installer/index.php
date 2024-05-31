@@ -33,6 +33,9 @@ $page_title = "CSB Installer";
 $THEME_DIR = $BASE_DIR . "csb-themes/default/";
 $THEME_URL = $BASE_URL . "csb-themes/default/";
 
+$NODE_MODULES_DIR = $BASE_DIR . "node_modules/";
+$NODE_MODULES_URL = $BASE_URL . "node_modules/";
+
 require_once($BASE_DIR . "csb-content/template_functions.php");
 
 
@@ -119,6 +122,6 @@ if (empty($_POST)) {
 
 $scripts = '<script type="text/javascript" src="'. $BASE_URL .'csb-content/js/network.js"></script>';
 $scripts .= '<script type="text/javascript" src="js/installer.js"></script>';
-$scripts .= '<script type="text/javascript" src="'.$BASE_URL.'csb-themes/default/js/bs4-form-validation.min.js"></script>';
+$scripts .= '<script type="text/javascript" src="'. $THEME_URL .'js/bs4-form-validation.min.js"></script>';
 $scripts .= '<script type="text/javascript" src="js/installer-validator.js"></script>';
 loadFooter($scripts);

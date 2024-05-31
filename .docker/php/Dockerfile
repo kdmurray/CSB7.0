@@ -7,7 +7,7 @@ RUN composer install
 
 # Main Stuff
 
-FROM php:8.2.17-apache
+FROM php:8.2.19-apache
 
 # Copy config
 COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
@@ -26,9 +26,18 @@ RUN docker-php-source extract \
     && docker-php-ext-enable xdebug mysqli \
     && docker-php-source delete
 
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-png
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 RUN docker-php-ext-install -j$(nproc) gd
 RUN php -i | grep gd
+
+
+# Install Node+NPM+packages
+COPY --from=node:lts /usr/local/bin/ /usr/local/bin/
+COPY --from=node:lts /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/npm
+COPY /scripts /app/scripts
+COPY package.json /app
+RUN npm install --prefix=/app
+
 # Set permissions
 RUN chown -R www-data:www-data /app \
     && a2enmod rewrite
