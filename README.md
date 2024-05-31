@@ -119,7 +119,7 @@ Services like SendGrid or Google's SMTP-Relay can help you get around this.
 
 #### Step 1: Setup Docker
 
-- Download and install the corresponding docker desktop version for your OS from [Docker](https://hub.docker.com/search?q=&type=edition&offering=community)
+- Download and install the corresponding docker desktop version for your OS from [Docker](https://www.docker.com/products/docker-desktop/)
 
 #### Step 2: Build and Start CSB
 
